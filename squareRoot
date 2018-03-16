@@ -1,6 +1,0 @@
-print "The square root of 5 is "; squareRoot(5)
-
-'define a function for returning a square root
-function squareRoot(value)
-  squareRoot = value ^ 0.5
-end function
