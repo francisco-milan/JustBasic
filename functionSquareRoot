@@ -5,9 +5,7 @@
 '>>> Logic and Structure
 '>>>> Functions and Subroutines
 
-
 print "The square root of 5 is "; squareRoot(5)
-
 
 'define a function for returning a square root
 function squareRoot(value)
