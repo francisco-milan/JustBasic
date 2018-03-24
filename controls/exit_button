@@ -1,0 +1,11 @@
+nomainwin
+
+button #main.button1, "Exit", [terminate], UL, 130, 150, 60, 40
+open "Sample Window" for window as #main
+
+wait
+
+[terminate]
+   notice "Thanks for using my application!"
+   close #main
+   end
