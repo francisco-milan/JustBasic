@@ -1,0 +1,27 @@
+nomainwin
+
+checkbox #main.checkbox1, "Enable Sound", [set], [reset], 106, 50, 130, 20
+button #main, "Get Checkbox Value", [get_checkbox_value], UL, 90, 150
+open "Checkbox test" for window as #main
+print #main, "trapclose [terminate]"
+
+[pause]
+   wait
+
+[set]
+   print #main.checkbox1, "set"
+   goto [pause]
+
+[reset]
+   print #main.checkbox1, "reset"
+   goto [pause]
+
+[get_checkbox_value]
+
+   print #main.checkbox1, "value? cbstate$"
+   notice "The checkbox control is currently set to "; cbstate$ 
+   goto [pause]
+
+[terminate]
+   close #main
+   end
