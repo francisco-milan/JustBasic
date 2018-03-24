@@ -1,0 +1,31 @@
+nomainwin
+
+
+statictext #main.statictext "Please specify your age:", 60, 60, 120, 20
+radiobutton #main.low, "17 or under", [warning], [nil], 60, 85, 130, 20
+radiobutton #main.medium, "18 -65", [reminder], [nil], 60, 115, 130, 20
+radiobutton #main.high, "66 or older", [disclaim], [nil], 60, 145, 130, 20
+textbox #main.textbox, 30, 280, 250, 20
+
+open "Age Confirmation" for window as #main
+print #main, "trapclose [terminate]"
+print #main.low, "set"
+
+[warning]
+#main.textbox, "You must be at least 18 years of age to continue."
+wait
+
+[reminder]
+#main.textbox, "Please have your credit card ready to proceed."
+wait
+
+[disclaim]
+#main.textbox, "Warning! This site is not for the faint of heart!"
+wait
+
+[nil]
+wait
+
+[terminate]
+close #main
+end
