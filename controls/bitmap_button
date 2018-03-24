@@ -1,0 +1,14 @@
+nomainwin
+
+bmpbutton #main.button1, "bmp\xoutbttn.bmp", [terminate], UL, 140, 150
+open "Sample Window" for window as #main 
+
+wait 
+
+[terminate] 
+
+notice "Thanks for using my application!"
+
+ close #main
+
+ end
