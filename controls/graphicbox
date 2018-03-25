@@ -1,0 +1,13 @@
+nomainwin
+
+graphicbox #handle.gbox, 30, 30, 200, 200
+open "Drawing" for window as #handle
+
+print #handle.gbox, "home" 'center the pen
+print #handle.gbox, "down" 'ready to draw
+
+print #handle.gbox, "fill yellow" 'fill the graphics area yellow
+print #handle.gbox, "circle 80" 'draw a circle
+print #handle.gbox, "flush" 'make the graphics stick
+
+wait
