@@ -1,0 +1,45 @@
+nomainwin
+
+groupbox #main, "Please specify your age:", 40, 20, 200, 120
+
+radiobutton #main.low, "17 or under", [warning], [nil], 60, 45, 130, 20
+radiobutton #main.medium, "18 through 65", [reminder], [nil], 60, 75, 130, 20
+radiobutton #main.high, "66 or older", [disclaimer], [nil], 60, 105, 130, 20
+textbox #main.firsttextbox, 38, 150, 240, 20
+
+groupbox #main, "Indicate how brave you are:", 40, 190, 200, 80
+
+radiobutton #main.yes, "I am a big chicken!", [chicken], [nil], 60, 210, 130, 20
+radiobutton #main.no, "I am fearless.", [brave], [nil], 60, 240, 130, 20
+textbox #main.secondtextbox, 38, 280, 240, 20
+
+open "Age Confirmation" for window as #main
+print #main, "trapclose [terminate]"
+print #main.low, "set"
+
+[warning]
+   #main.firsttextbox, "You must be at least 18 years of age to continue."
+   wait
+
+[reminder]
+#main.firsttextbox, "Please have your credit card ready to proceed."
+wait
+
+[disclaimer]
+   #main.firsttextbox, "Warning! This site is not for the faint of heart!"
+   wait
+
+[chicken]
+   #main.secondtextbox, "It doesn’t matter how old you are; run away!"
+   wait
+
+[brave]
+   #main.secondtextbox, "If you are at least 18, you may proceed."
+   wait
+
+[nil]
+   wait
+
+[terminate]
+   close #main
+   end
