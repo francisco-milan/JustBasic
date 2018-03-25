@@ -1,0 +1,11 @@
+nomainwin 
+
+statictext #main.Statictext "Once upon a time . . .", 40, 60, 210, 30 
+open "The Three Little Pigs" for window as #main 
+print #main, "font Garamond 16 bold" 
+
+wait 
+
+[terminate] 
+   close #main 
+   end
