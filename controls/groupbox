@@ -22,8 +22,8 @@ print #main.low, "set"
    wait
 
 [reminder]
-#main.firsttextbox, "Please have your credit card ready to proceed."
-wait
+   #main.firsttextbox, "Please have your credit card ready to proceed."
+   wait
 
 [disclaimer]
    #main.firsttextbox, "Warning! This site is not for the faint of heart!"
@@ -43,3 +43,4 @@ wait
 [terminate]
    close #main
    end
+
