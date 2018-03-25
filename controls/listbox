@@ -1,0 +1,32 @@
+nomainwin 
+
+names$(0) = "Mary" 
+names$(1) = "William" 
+names$(2) = "Molly" 
+names$(3) = "Alexander" 
+names$(4) = "Jerry" 
+names$(5) = "Bridget" 
+names$(6) = "Lazlo" 
+names$(7) = "Dolly" 
+names$(8) = "Mike" 
+names$(9) = "Mark" 
+names$(10) = "Nick" 
+
+statictext #main.statictext "Select a name:", 30, 30, 80, 20 
+listbox #main.listbox, names$(), [doubleclick], 30, 60, 100, 140 
+button #main.button, "OK", [displaychoice], UL, 60, 220, 40, 30 
+open "Listbox Control Demo" for window as #main 
+print #main, "trapclose [terminate]" 
+
+wait 
+
+[doubleclick]
+   wait 
+
+[displaychoice]
+   print #main.listbox, "selection? selected$" 
+   notice "You selected: "; selected$ 
+
+[terminate]
+   close #main 
+   end
