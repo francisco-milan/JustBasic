@@ -1,0 +1,13 @@
+nomainwin 
+
+texteditor #main.texteditor, 20, 20, 270, 250 
+
+open "Texteditor Control Demo" for window_nf as #main 
+
+print #main, "trapclose [terminate]" 
+
+wait 
+
+[terminate]
+   close #main 
+   end
