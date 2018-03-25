@@ -1,0 +1,35 @@
+nomainwin 
+
+names$(0) = "Mary" 
+names$(1) = "William" 
+names$(2) = "Molly" 
+names$(3) = "Alexander" 
+names$(4) = "Jerry" 
+names$(5) = "Bridget" 
+names$(6) = "Lazlo" 
+names$(7) = "Dolly" 
+names$(8) = "Mike" 
+names$(9) = "Mark" 
+names$(10) = "Nick" 
+
+statictext #main.statictext "Select a name:", 30, 30, 80, 20 
+combobox #main.combobox, names$(), [select], 30, 60, 100, 140 
+button #main.button, "OK", [displaychoice], UL, 60, 240, 40, 30 
+
+open "Combobox Control Demo" for window as #main 
+
+print #main, "trapclose [terminate]" 
+
+wait 
+
+[select] 
+
+   wait 
+
+[displaychoice]
+   print #main.combobox, "selection? selected$" 
+   notice "You selected: "; selected$ 
+
+[terminate]
+   close #main 
+   end
