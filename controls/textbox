@@ -1,0 +1,14 @@
+nomainwin 
+
+statictext #main.statictext "Please type your name:", 20, 30, 110, 30 
+textbox #main.Textbox, 20, 60, 200, 20
+
+open "Textbox Control Demo" for window as #main 
+
+print #main, "trapclose [terminate]" 
+
+wait 
+
+[terminate] 
+   close #main 
+   end
